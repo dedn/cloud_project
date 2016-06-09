@@ -1,0 +1,365 @@
+@import "bourbon";
+@import "vars.scss";
+
+body{
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.6;
+	font-family: "Akkurat";
+	overflow-x: hidden;
+}
+
+
+@mixin kerning($kerning) {
+  letter-spacing: $kerning + px;
+}
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.hidden{
+	display: none;
+}
+
+
+
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+
+  .container-header {
+    height: 100px;
+  }
+
+  &:before{
+    content: " ";
+    display:block;
+    position:absolute;
+    top:101px;
+    width:100%;
+    height:1px;
+    z-index: 1111;
+    background: whitesmoke;
+  }
+}
+
+.logo {
+  float: left;
+  margin-top: 12px;
+  margin-left: -7px;
+  margin-right: 141px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.main-nav {
+  float: left;
+  margin-right: 30px;
+  margin-top: 29px;
+  li {
+    display: inline-block;
+    margin: 5px;
+    margin-right: 29px;
+  }
+  a {
+    @include kerning(1);
+    color: #c3c3c3;
+    font:700 14px "Akkurat";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color:#69696b;
+    }
+  }
+}
+
+// Search Form Header
+.right-menu-block{
+ float:right;
+ padding-top: 32px;
+ padding-right: 7px;
+ form{
+  float:left;
+  position: relative;
+  margin-right: 35px;
+  margin-top: 5px;
+  input[type="text"]{
+   width:71px;
+   padding-left: 15px;
+   padding-bottom: 2px;
+   border:none;
+   border-bottom: 1px solid #e2e2e2;
+   background:url(../img/icon/search.png) no-repeat 1px 4px;
+
+ }
+
+ input[type="submit"]{
+  display:none;
+}
+}
+
+*::-webkit-input-placeholder{
+	color: #828283;
+  font-family: Akkurat;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+*:-moz-placeholder{
+	color: #828283;
+  font-family: Akkurat;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+*::-moz-placeholder{
+	color: #828283;
+  font-family: Akkurat;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder{
+	color: #828283;
+  font-family: Akkurat;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+}
+
+// Search Form Header
+
+.icon-bar{
+  float:left;
+  margin-left: 12px;
+  margin-right: -13px;
+  div{
+    margin-right: 10px;
+    display:inline-block;
+
+  }
+}
+.item-profile{
+  a{
+    position: relative;
+    left:2px;
+    width: 14px;
+    height: 13px;
+    display:block;
+    background:url(../img/icon/profile_1.png) no-repeat 0 0;
+  }
+}
+
+.item-vote{
+  a{
+    position: relative;
+    left:6px;
+    width: 14px;
+    height: 13px;
+    display:block;
+    background:url(../img/icon/vote.png) no-repeat 0 0;
+  }
+}
+.item-sale{
+  position:relative;
+  left: 13px;
+  top: 2px;
+  a{
+    position:relative;
+    width: 19px;
+    height: 17px;
+    display:block;
+    background:url(../img/icon/shop.png) no-repeat 0 0;
+    
+
+    &:after{
+      content: " ";
+      display:block;
+      position:absolute;
+      top: 8px;
+      left: 29px;
+      width: 7px;
+      height: 5px;
+      background:url(../img/icon/arrow-copy.png) no-repeat 0 0;
+    }
+  }
+}
+
+a:hover:after{
+  transform: rotate(-90deg);
+}
+.count-sale{
+  position:absolute;
+  top: -6px;
+  left: 11px;
+  width: 17px;
+  height:17px;
+  border-radius:50px; 
+  background-color: #ff5652;
+  color:#fff;
+  text-align: center;
+  font:400 9px/16px "Akkurat";
+  text-transform: uppercase;
+}
+
+
+// Hiden Block
+.hiden-section .container{
+  border: 1px solid whitesmoke;
+  padding: 13px 20px;
+
+}
+
+.trade-offer{
+  min-height:241px;
+
+  a{
+    color: #8a8a8b;
+    font:400 14px/30px "AkkuratLigth";
+    &:hover{
+      color: #8bc7e8;
+    }
+
+  }
+  h2{
+    margin-bottom: 29px;
+    color: #323335;
+    font-family: "Akkurat";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+// Demonstration image
+
+
+.resize-cont{
+  position:relative;
+  max-height:366px;
+}
+
+.cont-1,
+.cont-2,
+.cont-3,
+.cont-4, 
+.cont-5{
+  display: none;
+  position:absolute;
+  top:0;
+  left:0
+}  
+
+.demonstartion-cont-visibility{
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+
+}
+
+
+// Hero Section
+
+
+
+.hero {
+
+
+  min-height: 800px;
+  padding: 0 5px 5px 5px;
+  
+  color: #fff;
+  .hero-body {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    .hero-title {
+     position:absolute;
+     z-index: 2;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: black;
+     font: 400 72px/72px "Akkurat";
+     text-transform: uppercase;
+   
+      
+     .and{
+      color: black;
+      font-family:"ProximaNova";
+      font-size: 72px;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+  .behind {
+    position:absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top:-55px;
+    display: block;
+    opacity: 0.14;
+    color: black;
+    font-family: "ProximaNova";
+    font-size: 172px;
+    font-weight: 100;
+    text-transform: uppercase;
+    // @include kerning(1);
+  }
+}
+
+
+}
+
+
+.hero {
+  animation: rainbow 12s infinite;
+  background-image: url("../img/hero-bg.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-bottom: 200px;
+}
+
+@keyframes rainbow {
+  0% {
+    background: url("../img/hero-bg.jpg") no-repeat;
+    background-position: top center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.2);
+  }
+  33.3% {
+    background: url("../img/hero-slide-2.png") no-repeat;
+    background-position: top center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.2);
+  }
+  66.6% {
+
+    background: url("../img/hero-bg.jpg") no-repeat;
+    background-position: top center;
+    background-size: cover;
+    -webkit-box-shadow: 0 0 20px rgba(200, 50, 50, 0.2);
+  }
+}
+

@@ -1,0 +1,7 @@
+@import "bourbon";
+
+ @include font-face("AkkuratLigth", "../fonts/AkkuratLigth/AkkuratLigth", $file-formats: ttf eot woff);
+ @include font-face("Akkurat", "../fonts/Akkurat/Akkurat", $file-formats: ttf eot woff);
+ @include font-face("ProximaNova", "../fonts/ProximaNovaRegular/ProximaNovaT-Thin", $file-formats: ttf eot woff);
+ @include font-face("RomanC", "../fonts/RomanC/RomanC", $file-formats: ttf eot woff);
+ 
